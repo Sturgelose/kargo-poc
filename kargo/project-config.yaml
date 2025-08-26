@@ -5,9 +5,12 @@ metadata:
   namespace: guestbook
 spec:
   promotionPolicies:
-    - autoPromotionEnabled: true
-      stage: test
-    - autoPromotionEnabled: true
-      stage: uat
-    - autoPromotionEnabled: true
-      stage: prod-uswest
+  - stageSelector:
+      name: test
+    autoPromotionEnabled: true
+  - stageSelector:
+      name: uat
+    autoPromotionEnabled: true
+  - stageSelector:
+      name: prod-uswest
+    autoPromotionEnabled: true
